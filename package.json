@@ -4,10 +4,11 @@
   "description": "A simple calculator app built with Electron",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alexandros Tsieris",
   "license": "ISC",
   "devDependencies": {
     "electron": "^39.2.6"
