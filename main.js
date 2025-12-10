@@ -8,11 +8,16 @@ const createWindow = () => {
     height: 500,
     resizable: false,
     webPreferences: {
-      preload: path.join(__dirname, 'renderer.js')
-      }
+      preload: path.join(__dirname, "renderer.js")
+      // Don't use the renderer script as a preload. The renderer is
+      // already loaded from `index.html` via a script tag. Keep
+      // default webPreferences for now (no preload).
+    }
     });
 
     win.loadFile('index.html');
+    // Open DevTools to help debugging during development
+    //win.webContents.openDevTools();
 };
 
 app.whenReady().then(() => {
